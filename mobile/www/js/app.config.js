@@ -35,25 +35,16 @@ APP.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
-    .state('app.playlists', {
-      url: "/playlists",
+    .state('app.bluetooth', {
+      url: "/bluetooth",
       views: {
         'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
+          templateUrl: "templates/bleutooth.html",
+          controller: 'BluetoothCtrl'
         }
       }
     })
 
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/bluetooth');
 });
